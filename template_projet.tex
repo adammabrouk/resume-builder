@@ -1,0 +1,88 @@
+\documentclass[10pt,a4paper]{moderncv}
+
+% Theme and color settings
+\moderncvtheme[blue]{classic}
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+
+% Additional packages for graphics and icons
+\usepackage{graphicx} 
+\usepackage{fontawesome5} 
+
+% Personal Information
+\firstname{}
+\familyname{\huge Adam Mabrouk}
+\photo[90pt][0.4pt]{image.png}  % Profile image
+\title{Développeur Senior Python\\ \vspace{5pt} AWS et Databricks}
+\address{49 Grande Rue}{}{92380 Garches}
+\mobile{(+33) 6.65.20.51.66}
+\email{mabrouk.adam@outlook.com}
+\quote{Enthousiaste Python Cloud et Data ; Maîtrise AWS, Databricks et FinOps}
+
+% Font and bibliography settings
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\renewcommand{\familydefault}{\sfdefault}
+\makeatother
+
+% Multibib package for additional bibliographies
+\usepackage{multibib}
+\newcites{book,misc}{{Livres},{Autres}}
+
+% Page number settings
+\nopagenumbers{}                         
+
+\begin{document}
+\maketitle
+
+% Professional Experience Section
+\section{Expériences Professionnelles - 4 ans}
+
+\cventry{Oct 2023 - Sep 2024}{Chef de Projet ITSM - Infrastructures \& Opérations}{Veolia DB\&T}{Paris}{}{
+\begin{itemize}
+    \item Cartographie des entrepôts de données pour la CMDB, incluant S3, BigQuery, PostgreSQL.
+    \item Conception et déploiement d'un catalogue de services IT sur ServiceNow, incluant AWS, GCP, API.
+    \item Mise en place d'une approche IT as a Service pour simplifier l'offre IT.
+    \item Amélioration continue de l'intégration des données CMDB dans ServiceNow.
+    \item Pilotage de l'automatisation des services IT via ServiceNow.
+    \item Rationalisation des activités opérationnelles pour réduire les coûts.
+\end{itemize}}
+
+\cventry{Jan 2022 - Juin 2023}{Python Backend Dev - Architecte de Solutions AWS}{ImVitro}{Paris}{}{
+\begin{itemize}
+    \item \textit{\faPython \faAws \faDatabase Backend}: Développement d'API REST avec Python, Lambda, FastAPI.
+    \item Réduction des temps de traitement vidéo de 2 minutes à 1 minute par lot.
+    \item Optimisation des coûts cloud (-72\%) via une pile serverless.
+    \item Intégration CI/CD avec CloudFormation, AWS SAM, Docker, GitHub Actions.
+    \item Anonymisation de données ETL avec Glue pour KPI et tableaux de bord.
+\end{itemize}}
+
+\cventry{Jan - Dec 2021}{Python Backend Dev et FinOps}{Cloudeasier - Part of Accenture}{Paris}{}{
+\begin{itemize}
+    \item Développement backend SaaS avec Python, FastAPI, PostgreSQL sur AWS Serverless.
+    \item Implémentation CI/CD avec GitLab et Terraform.
+    \item Automatisation de l'audit financier de plateformes cloud.
+    \item Pilotage de missions FinOps (ateliers, audits, mises en œuvre).
+\end{itemize}}
+
+% Skills Section
+\section{Compétences Informatiques}
+\cvline{\textbf{Langages}}{Python, Java}
+\cvline{\textbf{Certifications}}{Solutions Architect AWS - Professional, Databricks Data Engineer - Professional}
+\cvline{\textbf{Data Eng.}}{Databricks, Spark, Glue, MongoDB Atlas, Kinesis}
+\cvline{\textbf{DevOps}}{Terraform, CloudFormation, AWS SAM, Git, Docker, GitHub Actions}
+\cvline{\textbf{AWS}}{IAM, API Gateway, Lambda, ECS, RDS, DynamoDB, EMR}
+
+% Education Section
+\section{Parcours Académique}
+\cventry{2019--2020}{Double MSc Informatique / Data Science}{Ecole Centrale de Lyon}{Lyon, France}{}{}
+\cventry{2018--2019}{Programme Année de Césure : Centrale Digital Lab}{Ecole Centrale de Lyon}{Lyon, France}{}{}
+\cventry{2016--2018}{Ingénieur Généraliste}{Ecole Centrale de Casablanca}{Casablanca, Maroc}{}{}
+\cventry{2014--2016}{Classe Préparatoire}{Sciences et Technologies Industrielles}{Safi, Maroc}{}{}
+
+% Languages Section
+\section{Langues Parlées}
+\cvline{\textbf{Langues}}{Français (Courant), Anglais (Courant, TOEIC: 900), Arabe (Maternelle), Espagnol (Conversationnel)}
+
+\end{document}

@@ -1,0 +1,96 @@
+
+\documentclass[10pt,a4paper]{moderncv}
+
+\moderncvtheme[blue]{classic} 
+\usepackage[utf8]{inputenc}  %Windows 
+\usepackage[french, english]{babel}
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\usepackage{graphicx} % Add this package for including images
+\usepackage{fontawesome5} % Add the fontawesome5 package for icons
+
+\firstname{}
+\familyname{\huge Adam Mabrouk}
+\photo[90pt][0.4pt]{image.png}  % Set the profile image size and spacing
+\title{IT Architect | Specialist in Digital Transformation, Cloud Solutions \& MongoDB Integration}  % Updated title
+
+\address{49 Grande Rue}{}{92380 Garches}
+\mobile{(+33) 6.65.20.51.66}
+\email{mabrouk.adam@outlook.com}                              
+
+
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\renewcommand{\familydefault}{\sfdefault}
+\makeatother
+
+\usepackage{multibib}
+\newcites{book,misc}{{Books},{Others}}
+
+\nopagenumbers{}                         
+
+\begin{document}
+\maketitle
+
+\section{Professional Experience}
+
+\cventry{Feb 2024 - Present}{Principal Data Engineer}{Engie Digital}{Paris}{}{
+    - Architected and deployed a robust MongoDB Atlas infrastructure across multiple regions with multi-availability zone replication, utilizing sharded clusters and replica sets to ensure high availability and scalability for critical data workloads. Integrated secure network configurations, including VPC PrivateLinks, to support seamless and secure data access.\\
+    - Developed scalable ETL pipelines in Databricks, integrating MongoDB Atlas Triggers with AWS Kinesis Data Streams to capture real-time data, ensuring low-latency and responsive data processing.\\
+    - Leveraged Terraform to automate infrastructure provisioning, enabling consistent configuration management across cloud environments and simplifying cluster management and scaling.\\
+    - Achieved a 60\% cost reduction through Spark code optimization, cluster rightsizing, and enforcing cluster policies.
+    \newline
+    \textbf{Technologies used:} MongoDB Atlas, Python, PySpark, Databricks, Terraform, EC2, Kinesis Data Streams, VPC PrivateLinks
+}
+
+\vspace{10pt}
+
+\cventry{Jul 2023 - Jan 2024}{Data Operations Lead - Infrastructure \& Operations Domain}{Veolia Water Information Systems}{Paris}{}{
+  - Conducted a thorough assessment and optimization of various IT architectures and data repositories for the Industrial Business Unit.\\
+  - Streamlined data flow to ServiceNow's CMDB by defining clear processes for automated data population.\\
+  - Implemented data-centric service delivery automation on ServiceNow, integrating with cloud-based automated workflows.\\
+  - Rationalized RUN-linked costs (Capex \& Opex) due to service delivery automation and centralization.
+  \newline
+  \textbf{Technologies used:} Python, Terraform, BigQuery, Apigee, API Gateway, Lambda
+}
+
+\vspace{10pt}
+
+\cventry{Jan 2022 - Jun 2023}{Data Engineer - AWS Solutions Architect}{ImVitro}{Paris}{}{
+  - \textbf{[MLOps]} Reduced ML cloud costs by 72\% through serverless architecture migration, reworking inference code to prevent memory leaks, and optimizing PyTorch inference for CPU while creating slim Docker images.\\
+  - \textbf{[Data Engineering]} Built an ingestion pipeline to collect microscope images from SQLite files stored on clinic servers.\\
+  - \textbf{[Data Engineering]} Designed data pipelines in Databricks to normalize image data and store final images in S3.\\
+  - Stored metadata and state information in DynamoDB for tracking and future use.\\
+  - \textbf{[CI/CD]} Implemented CI/CD pipelines using Docker, AWS SAM, and Github Actions.
+  \newline
+  \textbf{Technologies used:} Python, FastAPI, Mangum, AWS (Lambda, S3, DynamoDB, SQS, SNS, Cognito), Databricks, Docker, Github Actions, SQLite
+}
+
+\vspace{10pt}
+
+\cventry{Jan - Dec 2021}{Backend and Data Engineer - FinOps SaaS Tool}{Cloudeasier - Part of Accenture}{Paris}{}{
+  - Developed Data Platform for Cloud Cost Analytics SaaS tool across cloud platforms using AWS Serverless stack.\\
+  - Used Kinesis streams and Firehose for usage metrics ingestion, enabling cross-analysis between cost and usage to provide cloud cost optimization recommendations.\\
+  - Led FinOps missions, optimizing cloud spending and conducting financial audits.
+  \newline
+  \textbf{Technologies used:} Python, AWS, Kinesis Data Streams, Docker, Gitlab, Athena, Glue Data Catalog, PostgreSQL - RDS, Terraform
+}
+
+\vspace{10pt}
+
+\section{Technical Skills}
+\cvline{\textbf{Languages}}{Python, Java}
+\cvline{\textbf{Certifications}}{AWS Solutions Architect - Professional, Databricks Data Engineer - Professional}
+\cvline{\textbf{Digital Transformation}}{Databricks, Spark, Glue, MongoDB Atlas, Kinesis}
+\cvline{\textbf{DevOps}}{Terraform, CloudFormation, AWS SAM, Git, Gitlab, Docker, Github Actions}
+\cvline{\textbf{AWS}}{IAM, API Gateway, EC2, CloudWatch, Lambda, ECS Fargate, ECR, RDS - PostgreSQL, DynamoDB, EMR - Spark}
+
+\section{Educational Background}
+\cventry{2019--2020}{Double MSc in Computer Science / Data Science}{Ecole Centrale de Lyon}{}{\textit{Lyon, France}}{}
+\cventry{2018--2019}{Gap Year Program: Centrale Digital Lab}{Ecole Centrale de Lyon}{}{\textit{Lyon, France}}{}
+\cventry{2016--2018}{General Engineering}{Ecole Centrale de Casablanca}{}{\textit{Casablanca, Morocco}}{}
+\cventry{2014--2016}{Preparatory Class: 2nd / 896 students in Morocco}{Industrial Sciences and Technologies}{}{\textit{Safi, Morocco}}{}
+
+\section{Languages Spoken}
+\cvline{Languages}{French (Fluent), English (Fluent, TOEIC: 900), Arabic (Native), Spanish (Conversational)}
+
+\end{document}

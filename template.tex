@@ -1,0 +1,96 @@
+\documentclass[10pt,a4paper]{moderncv}
+
+\moderncvtheme[blue]{classic} 
+\usepackage[utf8]{inputenc}  %Windows 
+\usepackage[french, english]{babel}
+\usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
+\usepackage{graphicx} % Add this package for including images
+\usepackage{fontawesome5} % Add the fontawesome5 package for icons
+
+
+\firstname{\huge}
+\familyname{\huge Adam Mabrouk}
+\photo[90pt][0.4pt]{image.png}  % Set the profile image size and spacing
+\title{ Cloud \& Data Solutions Architect  \\ \vspace{5pt} AWS et Databricks}  % Updated title (customize for each application)
+
+\address{49 Grande Rue}{}{92380 Garches}
+\mobile{(+33) 6.65.20.51.66}
+\email{mabrouk.adam@outlook.com}                              
+\quote{Enthousiaste Cloud et Data ; Maîtrise AWS, Databricks et FinOps}  % Removed new line
+
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\renewcommand{\familydefault}{\sfdefault}
+\makeatother
+
+\usepackage{multibib}
+\newcites{book,misc}{{Livres},{Autres}}
+
+\nopagenumbers{}                         
+
+\begin{document}
+\maketitle
+
+\section{Expériences Professionnelles - 4 ans}  % Updated the section order
+
+\cventry{Avril 2024 - Sep 2024}{Lead Data Engineer}{Engie Digital}{Paris}{}{
+    - Refactoring de l'intégralité des ETLs du catalogue de données (43 tables) afin de faciliter le RUN.\\
+    - Introduction de pipelines streaming depuis MongoDB Atlas, en utilisant le MongoDB Spark connector, Delta Live Pipelines, ce qui a permis de débloquer de nouveaux cas d'usage clients.\\
+    - Optimisation des coûts de 40\% grâce à l'optimisation du code Spark, la mutualisation/stratégies Spot sur les clusters, ainsi que le rightsizing et la configuration d'arrêt en cas d'inactivité.\\
+    - Technologies : MongoDB Atlas, MongoDB Spark Connector, Databricks, Python, Spark, S3
+}
+\vspace{5pt}
+\cventry{Oct 2023 - Avril 2024}{Lead Projet ITSM - Infrastructures \& Opérations}{Veolia Water Information Systems}{Paris}{}{
+  - \hspace{0.25em} Mise en place d'un catalogue de services sur ServiceNow ( IT as a Service ) à destination des différentes Business Units métiers afin de structurer l'offre de services infra interne.\\
+  - \hspace{0.25em} Automatisation de la fourniture de services via des intégrations ServiceNow ; Définition et pilotage de la transformation. \\
+  - \hspace{0.25em} Rationalisation des activités en RUN de manière transversale pour améliorer la performance opérationnelle et réduire les coûts.\\
+}
+
+
+\cventry{Jan 2022 - Juin 2023}{Ingénieur Backend Serverless - Architecte de Solutions AWS}{ImVitro}{Paris}{}{
+  - \textit{\faPython \hspace{0.25em} \faAws \hspace{0.25em} \faDatabase \hspace{0.25em} Backend }: Développement d'API REST en utilisant Python, Lambda, FastAPI, et une pile complètement Serverless AWS.\\
+  - \textit{\faPython \hspace{0.25em} \faAws \hspace{0.25em} Optimisation }: Réduction du temps de traitement vidéo et du temps d'inférence de \textbf{2 minutes / vidéo} à \textbf{1 minute pour tout lot de vidéos}, en mettant à l'échelle horizontalement le microservice de prédiction.\\
+  - \textit{\faPython \hspace{0.25em} \faAws \hspace{0.25em} FinOps et MLOps  }: Réduction des coûts cloud de 72\% en retravaillant le code d'inférence des modèles IA, en migrant la pile vers une solution entièrement serverless, et en désactivant les systèmes obsolètes.\\
+  - \textit{\faPython \hspace{0.25em} \faAws \hspace{0.25em} \faDocker \hspace{0.25em} \faGithub \hspace{0.25em} \faCodeBranch \hspace{0.25em} DevOps}: Intégration CI/CD en utilisant Cloudformation, AWS SAM, Docker, Github Actions.\\
+  - \textit{\faPython \hspace{0.25em} \faAws \hspace{0.25em} Intégration d'API REST}: Conception de l'architecture réseau et intégration de la plateforme ImVitro SAS aux API REST des Incubateurs Timelapse pour automatiser le téléchargement et l'évaluation des vidéos d'embryons.\\
+  - \textit{\faPython \hspace{0.25em} \faAws \hspace{0.25em} \faDatabase \hspace{0.25em} ETL}: Mise en place d'un processus d'anonymisation des données ETL en utilisant Glue, pour le tableau de bord interne et la mesure des KPI.
+}
+
+% Add some space here between sections
+\vspace{5pt}
+
+\cventry{Jan-Dec 2021}{Ingénieur Backend et FinOps}{Cloudeasier - Part of Accenture}{Paris}{}{
+  - \faPython \hspace{0.25em} \faAws \hspace{0.25em} \faDatabase \hspace{0.25em} Développement backend d'un outil SAS pour le contrôle des coûts sur plusieurs plateformes Cloud, en utilisant une pile AWS Serverless, le tout intégré dans une API REST documentée. \\
+  - \faPython \hspace{0.25em} \faAws  \hspace{0.25em} \faGitlab  \hspace{0.25em} \faDocker \hspace{0.25em}  Implémentation d'une chaîne CI/CD sur Gitlab ( Build -> Test unitaire -> Déploiement Terraform ). \\
+  - \faPython \hspace{0.25em} \faAws \hspace{0.25em} \faMicrosoft \hspace{0.25em} \faGoogle \hspace{0.25em} Développement d'un cadre interne permettant l'automatisation de l'audit financier de la plateforme cloud d'un client. \\
+  - Participation au Brainstorming, à l'écriture des User Stories, des différentes fonctionnalités. \\
+  - Pilotage de missions FinOps ( Organisation d'Ateliers, Lancement d'audits, Restitution, support sur les mises en œuvre ).
+}
+% Add some space here between sections
+\vspace{10pt}
+
+
+
+\section{Compétences Informatiques}
+\cvline{\textbf{Langages}}{Python, Java}
+\cvline{\textbf{Certifications: }}{Solutions Architect AWS - Professional / Databricks Data engineer - Professional}
+\cvline{\textbf{Data Eng.}}{Databricks, Spark, Glue, MongoDB Atlas, Kinesis}
+\cvline{\textbf{DevOps}}{Terraform, Cloudformation, AWS SAM, Git, Gitlab, Github, Github Actions, Docker}
+\cvline{\textbf{AWS}}{IAM, API Gateway, EC2, Cloudwatch, Lambda, ECS Fargate, ECR, RDS - PostgreSQL, DynamoDB, EMR - Spark}
+
+% Add some space here between sections
+\vspace{10pt}
+
+\section{Parcours Académique}
+\cventry{2019--2020}{Double MSc Informatique / Data Science}{Ecole Centrale de Lyon}{}{\textit{Lyon, France}}{}
+\cventry{2018--2019}{Programme Année de Césure : Centrale Digital Lab}{Ecole Centrale de Lyon}{}{\textit{Lyon, France}}{}
+\cventry{2016--2018}{Ingénieur Généraliste}{Ecole Centrale de Casablanca}{}{\textit{Casablanca, Maroc}}{}
+\cventry{2014--2016}{Classe Préparatoire : 2ème / 896 étudiants au Maroc}{Sciences et technologies Industrielles}{}{\textit{Safi, Maroc}}{}
+
+% Add some space here between sections
+\vspace{10pt}
+
+\section{Langues Parlées}
+\cvline{Langues}{Français (Courant), Anglais (Courant, TOEIC: 900), Arabe (Langue Maternelle), Espagnol (Conversationnel) }
+
+\end{document}
