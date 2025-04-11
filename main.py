@@ -105,6 +105,8 @@ latex_template = st.sidebar.text_area("Paste LaTeX Template", height=300)
 def compile_latex(latex_code, profile_image_file):
     logger.info("Creating a temporary directory for LaTeX compilation.")
     temp_dir = tempfile.mkdtemp()
+    os.chmod(temp_dir, 0o777)
+
     try:
         # Save the LaTeX code to a temporary file
         latex_path = os.path.join(temp_dir, "resume.tex")
@@ -119,10 +121,13 @@ def compile_latex(latex_code, profile_image_file):
             profile_image_path = os.path.join(temp_dir, profile_image_file.name)
             logger.info("Saving profile image to temporary file: %s", profile_image_path)
             with open(profile_image_path, "wb") as f:
-                f.write(profile_image_file.read())
-
+                bytes_to_write = profile_image_file.read()
+                logger.info("Length of profile image bytes: %d", len(bytes_to_write))
+                f.write(bytes_to_write) 
+            os.chmod(profile_image_path, 0o644)
         # Compile the LaTeX file to PDF using pdflatex
         logger.info("Compiling LaTeX file to PDF.")
+        os.chdir(temp_dir)
         result = subprocess.run(["lualatex", "-interaction=nonstopmode", "-output-directory", temp_dir, latex_path])
         logger.info("LaTeX compilation finished with return code: %d", result.returncode)
 

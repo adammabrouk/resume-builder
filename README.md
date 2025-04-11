@@ -37,4 +37,8 @@ Install steps
      tlmgr install moderncv geometry babel fontawesome5 multibib graphicx
 ```
 
+```
+docker buildx build --platform linux/amd64 -t resume-builder:latest .
+```
+
 By following these steps, you will set up your Python environment and install the necessary LaTeX packages using `tlmgr`. install moderncv geometry babel fontawesome5 multibib graphicx
